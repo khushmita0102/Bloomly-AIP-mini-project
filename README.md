@@ -1,6 +1,6 @@
 # Bloomly- Habit Tracker 
 
-A fully functional Daily Habit Tracker web application built using **Java Servlets**, **Hibernate ORM**, **JSP**, **JSTL**, **MySQL**, and **Maven**, deployed on **Apache Tomcat 9**.
+A fully functional Daily Habit Tracker web application built using **Java Servlets**, **Hibernate ORM**, **JSP**, **JSTL**, **MySQL**, and **Maven**, deployed on **Apache Tomcat 11**.
 
 ---
 
