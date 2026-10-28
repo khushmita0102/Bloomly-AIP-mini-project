@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- ============================================================
+             DATABASE CONNECTION SETTINGS
+             Update the values below to match your MySQL installation.
+             ============================================================ -->
+
+        <!-- JDBC Driver -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <!-- Database URL
+             Replace 'localhost:3306' with your MySQL host and port if different.
+             Replace 'habit_tracker_db' with your database name if different. -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/habit_tracker_db?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true</property>
+
+        <!-- Database credentials
+             Replace 'root' and 'your_password' with your actual MySQL credentials. -->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+
+        <!-- ============================================================
+             HIBERNATE 6 DIALECT
+             MySQLDialect auto-detects the version. No need for MySQL8Dialect.
+             ============================================================ -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- ============================================================
+             SCHEMA MANAGEMENT
+             'update' — creates tables on first run, alters on subsequent runs.
+             Change to 'validate' after initial setup if preferred.
+             ============================================================ -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Show generated SQL in the log (useful during development) -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- ============================================================
+             ENTITY CLASS MAPPINGS
+             ============================================================ -->
+        <mapping class="com.habittracker.entity.Habit"/>
+        <mapping class="com.habittracker.entity.HabitCompletion"/>
+
+    </session-factory>
+</hibernate-configuration>
