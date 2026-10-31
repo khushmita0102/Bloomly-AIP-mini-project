@@ -143,24 +143,3 @@ DailyHabitTracker/
 
 ---
 
-## Troubleshooting
-
-**"Access denied for user 'root'@'localhost'"**
-→ Check the password in `hibernate.cfg.xml`.
-
-**"Communications link failure"**
-→ MySQL server is not running. Start it via Services or MySQL Workbench.
-
-**"ClassNotFoundException: com.mysql.cj.jdbc.Driver"**
-→ Run `mvn clean package` again; the MySQL connector JAR must be in WEB-INF/lib.
-
-**Tomcat shows HTTP 500 on startup**
-→ Check Tomcat logs (`logs/catalina.out`). Usually a Hibernate config error.
-
-**Tables not created**
-→ Ensure `habit_tracker_db` database exists and credentials are correct.
-→ Run `database_setup.sql` manually.
-
----
-6. **MySQL Workbench** (optional, for GUI)
-7. **Apache NetBeans** (recommended IDE)
